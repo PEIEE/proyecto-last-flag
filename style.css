@@ -92,6 +92,25 @@ h4 {
     font-size: 0.85rem;
 }
 
+.btn-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: contain;
+    margin-right: 0.6rem;
+    filter: brightness(0) invert(1);
+}
+
+.btn-outline .btn-icon {
+    filter: none; /* Keep original color if it's already colored, or adjust as needed */
+}
+
+/* Adjust button for icons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* -------- NAVBAR -------- */
 .navbar {
     position: fixed;
@@ -141,6 +160,113 @@ h4 {
 
 .nav-links a:hover {
     color: #fff;
+}
+
+/* -------- LANGUAGE DROPDOWN -------- */
+.lang-dropdown {
+    position: relative;
+    margin: 0 1.5rem;
+}
+
+.lang-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-trigger:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+}
+
+.lang-trigger::after {
+    content: '▼';
+    font-size: 0.6rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.lang-dropdown:hover .lang-trigger::after {
+    transform: rotate(180deg);
+}
+
+.lang-options {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    min-width: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.lang-dropdown:hover .lang-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-option:hover {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-option.active {
+    color: #000;
+    background: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .lang-dropdown {
+        margin: 1rem 0;
+    }
+    .lang-options {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        gap: 0.5rem;
+    }
+    .lang-trigger {
+        display: none;
+    }
 }
 
 /* -------- HERO SECTION -------- */
@@ -231,25 +357,56 @@ h4 {
     max-width: 700px;
 }
 
-.hero-eyebrow {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--primary);
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+/* -------- HERO TICKER -------- */
+.hero-ticker {
+    width: 100%;
+    max-width: fit-content;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(var(--primary-rgb), 0.05);
+    padding: 0.4rem 0;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
-.hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 2px;
-    background: var(--primary);
+.ticker-track {
+    display: flex;
+    white-space: nowrap;
+    width: max-content;
+    animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--primary);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-sep {
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0 0.5rem;
+}
+
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .hero-ticker {
+        max-width: 100%;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+    }
 }
 
 .hero-title {

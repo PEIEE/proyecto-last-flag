@@ -1,3 +1,53 @@
+import { translations } from './translations.js';
+
+/* -------------------------------------------------------
+   Internationalization (i18n) Logic
+   ------------------------------------------------------- */
+let currentLang = localStorage.getItem('lastFlagLang') || 'es';
+
+function updateContent(lang) {
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      // If it has HTML tags, use innerHTML
+      if (translations[lang][key].includes('<')) {
+        element.innerHTML = translations[lang][key];
+      } else {
+        element.textContent = translations[lang][key];
+      }
+    }
+  });
+
+  // Update button states
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // Update trigger text
+  const trigger = document.querySelector('.lang-trigger');
+  if (trigger) {
+    trigger.textContent = lang.toUpperCase();
+  }
+
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+  updateContent(currentLang);
+
+  // Add event listeners to language options
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentLang = btn.dataset.lang;
+      localStorage.setItem('lastFlagLang', currentLang);
+      updateContent(currentLang);
+    });
+  });
+});
+
 /* -------------------------------------------------------
    YouTube IFrame API – video background for hero section
    Video: Last Flag | Gameplay Reveal - Gamescom 2025

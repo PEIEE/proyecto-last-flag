@@ -21,16 +21,31 @@
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/#how-to-play">How to Play</a></li>
-                    <li><a href="/#playstyles">Playstyles</a></li>
-                    <li><a href="/#contestants">Contestants</a></li>
-                    <li><a href="/#tournaments">Tournaments</a></li>
-                    <li><a href="/#discord">Community</a></li>
+                    <li><a href="/#how-to-play" data-i18n="nav-how-to-play">How to Play</a></li>
+                    <li><a href="/#playstyles" data-i18n="nav-playstyles">Playstyles</a></li>
+                    <li><a href="/#contestants" data-i18n="nav-contestants">Contestants</a></li>
+                    <li><a href="/#tournaments" data-i18n="nav-tournaments">Tournaments</a></li>
+                    <li><a href="/#discord" data-i18n="nav-community">Community</a></li>
                 </ul>
             </nav>
-            <div>
-                <a href="https://lastflag.firstlook.gg/signup/waitlist" target="_blank"
-                    class="btn btn-primary btn-nav">Sign Up to Playtest</a>
+            <div class="lang-dropdown">
+                <button class="lang-trigger">ES</button>
+                <div class="lang-options">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <a href="http://bit.ly/4oNgbQM" target="_blank"
+                    class="btn btn-outline btn-nav">
+                    <img src="steam-logo.png" alt="Steam" class="btn-icon" style="filter: none;">
+                    <span data-i18n="hero-wishlist">Get it on STEAM</span>
+                </a>
+                <a href="https://store.epicgames.com/" target="_blank"
+                    class="btn btn-primary btn-nav">
+                    <img src="epic-logo.png" alt="Epic Games" class="btn-icon">
+                    <span data-i18n="nav-signup">Get it on EPIC GAMES</span>
+                </a>
             </div>
         </div>
     </header>
@@ -49,16 +64,16 @@
             <div class="char-info-container animate-up visible" style="transition-delay: 0.15s;">
                 <div class="char-header">
                     <p class="char-real-name">Shin Soo-Jin</p>
-                    <p class="char-role">Stealth Infiltrator</p>
+                    <p class="char-role" data-i18n="role-stealth">Stealth Infiltrator</p>
                     <h1 class="char-title">Knives</h1>
                 </div>
 
                 <div class="char-lore-block">
-                    <p>The lethal, masked assassin known as Knives strikes from the shadows and vanishes before the smoke clears. Fast, relentless, and unforgiving — if she has her sights on you, it’s already over.</p>
+                    <p data-i18n="lore-knives">The lethal, masked assassin known as Knives strikes from the shadows and vanishes before the smoke clears. Fast, relentless, and unforgiving — if she has her sights on you, it’s already over.</p>
                 </div>
 
                 <div class="char-abilities-wrapper">
-                    <h3 class="char-section-title">Abilities</h3>
+                    <h3 class="char-section-title" data-i18n="abilities-label">Abilities</h3>
                     <div class="char-abilities-grid">
                         <div class="char-ability-card">
                             <span class="ability-badge primary">Primary</span>
@@ -76,11 +91,11 @@
                 </div>
 
                 <div class="char-backstory-wrapper">
-                    <h3 class="char-section-title">About Shin Soo-Jin</h3>
-                    <p>A master of close-quarters combat and stealth, Shin Soo-Jin was a prodigious talent in the underground martial arts scene in Seoul. Her unparalleled agility and precision earned her the moniker "Knives." Now, she brings her deadly swiftness to the Last Flag arena, proving that the most dangerous threats are the ones you never see coming.</p>
+                    <h3 class="char-section-title" data-i18n="about-shin">About Shin Soo-Jin</h3>
+                    <p data-i18n="backstory-knives">A master of close-quarters combat and stealth, Shin Soo-Jin was a prodigious talent in the underground martial arts scene in Seoul. Her unparalleled agility and precision earned her the moniker "Knives." Now, she brings her deadly swiftness to the Last Flag arena, proving that the most dangerous threats are the ones you never see coming.</p>
                 </div>
 
-                <a href="/#contestants" class="btn btn-outline" style="margin-top: 2rem;">Back to Roster</a>
+                <a href="/#contestants" class="btn btn-outline" style="margin-top: 2rem;" data-i18n="back-to-roster">Back to Roster</a>
             </div>
 
         </div>
@@ -91,8 +106,14 @@
         <div class="container animate-up visible">
             <h2 class="cta-title">Join the Arena</h2>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://lastflag.firstlook.gg/signup/waitlist" target="_blank" class="btn btn-primary">Sign Up
-                    to Playtest</a>
+                <a href="https://store.epicgames.com/" target="_blank" class="btn btn-primary">
+                    <img src="epic-logo.png" alt="Epic Games" class="btn-icon">
+                    <span data-i18n="nav-signup">Get it on EPIC GAMES</span>
+                </a>
+                <a href="http://bit.ly/4oNgbQM" target="_blank" class="btn btn-outline">
+                    <img src="steam-logo.png" alt="Steam" class="btn-icon" style="filter: none;">
+                    <span data-i18n="hero-wishlist">Get it on STEAM</span>
+                </a>
             </div>
         </div>
     </section>
@@ -112,9 +133,9 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <p>© Last Flag 2025 – Night Street Games</p>
-                <a href="https://lastflag.com/privacy-policy" target="_blank">Privacy Policy</a>
-                <a href="https://lastflag.com/eula" target="_blank">EULA</a>
-                <a href="https://cosmocover.box.com/s/opw3u9lmq9jkeip847bglfgfkfk06bv7" target="_blank">Media Kit</a>
+                <a href="https://lastflag.com/privacy-policy" target="_blank" data-i18n="footer-privacy">Privacy Policy</a>
+                <a href="https://lastflag.com/eula" target="_blank" data-i18n="footer-eula">EULA</a>
+                <a href="https://cosmocover.box.com/s/opw3u9lmq9jkeip847bglfgfkfk06bv7" target="_blank" data-i18n="footer-media">Media Kit</a>
             </div>
         </div>
     </footer>

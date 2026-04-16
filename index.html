@@ -21,16 +21,31 @@
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#how-to-play">How to Play</a></li>
-                    <li><a href="#playstyles">Playstyles</a></li>
-                    <li><a href="#contestants">Contestants</a></li>
-                    <li><a href="#tournaments">Tournaments</a></li>
-                    <li><a href="#discord">Community</a></li>
+                    <li><a href="#how-to-play" data-i18n="nav-how-to-play">How to Play</a></li>
+                    <li><a href="#playstyles" data-i18n="nav-playstyles">Playstyles</a></li>
+                    <li><a href="#contestants" data-i18n="nav-contestants">Contestants</a></li>
+                    <li><a href="#tournaments" data-i18n="nav-tournaments">Tournaments</a></li>
+                    <li><a href="#discord" data-i18n="nav-community">Community</a></li>
                 </ul>
             </nav>
-            <div>
-                <a href="https://lastflag.firstlook.gg/signup/waitlist" target="_blank"
-                    class="btn btn-primary btn-nav">Sign Up to Playtest</a>
+            <div class="lang-dropdown">
+                <button class="lang-trigger">ES</button>
+                <div class="lang-options">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <a href="http://bit.ly/4oNgbQM" target="_blank"
+                    class="btn btn-outline btn-nav">
+                    <img src="steam-logo.png" alt="Steam" class="btn-icon" style="filter: none;">
+                    <span data-i18n="hero-wishlist">Get it on STEAM</span>
+                </a>
+                <a href="https://store.epicgames.com/" target="_blank"
+                    class="btn btn-primary btn-nav">
+                    <img src="epic-logo.png" alt="Epic Games" class="btn-icon">
+                    <span data-i18n="nav-signup">Get it on EPIC GAMES</span>
+                </a>
             </div>
         </div>
     </header>
@@ -45,20 +60,36 @@
         <div class="hero-gradient"></div>
         <div class="hero-side-gradient"></div>
         <div class="container hero-content animate-up">
-            <p class="hero-eyebrow">Open Beta 2026 · 5v5 Capture the Flag</p>
-            <h1 class="hero-title">
+            <div class="hero-ticker">
+                <div class="ticker-track" data-i18n="hero-ticker">
+                    <span class="ticker-item">Available now on STEAM & EPIC GAMES!</span>
+                    <span class="ticker-sep">•</span>
+                    <span class="ticker-item">Console release coming soon!</span>
+                    <span class="ticker-sep">•</span>
+                    <span class="ticker-item">Available now on STEAM & EPIC GAMES!</span>
+                    <span class="ticker-sep">•</span>
+                    <span class="ticker-item">Console release coming soon!</span>
+                    <span class="ticker-sep">•</span>
+                </div>
+            </div>
+            <h1 class="hero-title" data-i18n="hero-title">
                 Hide.<br />
                 Hunt.<br />
                 <span>Capture.</span>
             </h1>
-            <p class="hero-desc">
+            <p class="hero-desc" data-i18n="hero-desc">
                 Welcome to Last Flag — a fast-paced 5v5 shooter with showstopping contestants, set in a televised
                 competition where strategy, teamwork, and chaos collide.
             </p>
             <div class="hero-btns">
-                <a href="https://lastflag.firstlook.gg/signup/waitlist" target="_blank" class="btn btn-primary">Sign Up
-                    to Playtest</a>
-                <a href="http://bit.ly/4oNgbQM" target="_blank" class="btn btn-outline">Wishlist on Steam</a>
+                <a href="https://store.epicgames.com/" target="_blank" class="btn btn-primary">
+                    <img src="epic-logo.png" alt="Epic Games" class="btn-icon">
+                    <span data-i18n="nav-signup">Get it on EPIC GAMES</span>
+                </a>
+                <a href="http://bit.ly/4oNgbQM" target="_blank" class="btn btn-outline">
+                    <img src="steam-logo.png" alt="Steam" class="btn-icon" style="filter: none;">
+                    <span data-i18n="hero-wishlist">Get it on STEAM</span>
+                </a>
             </div>
         </div>
     </section>
@@ -68,9 +99,9 @@
         <div class="container">
             <div class="feature-inner">
                 <div class="feature-text animate-up">
-                    <p class="feature-label">The Rules</p>
-                    <h2 class="feature-title">Hide. Hunt. Capture.</h2>
-                    <p class="feature-desc">
+                    <p class="feature-label" data-i18n="rules-label">The Rules</p>
+                    <h2 class="feature-title" data-i18n="rules-title">Hide. Hunt. Capture.</h2>
+                    <p class="feature-desc" data-i18n="rules-desc">
                         You've got 60 seconds to find a sneaky hiding spot for your flag. After that, it's
                         <strong>SHOWTIME!</strong> Work with your allies to take control of the map and stop the other
                         team from finding your flag, all while hunting down theirs. The first team to bring home the
@@ -89,9 +120,9 @@
         <div class="container">
             <div class="feature-inner reverse">
                 <div class="feature-text animate-up">
-                    <p class="feature-label">Your Playstyle</p>
-                    <h2 class="feature-title">Play Your Way</h2>
-                    <p class="feature-desc">
+                    <p class="feature-label" data-i18n="playstyle-label">Your Playstyle</p>
+                    <h2 class="feature-title" data-i18n="playstyle-title">Play Your Way</h2>
+                    <p class="feature-desc" data-i18n="playstyle-desc">
                         Cashbot crusher, radar tower tycoon, flag-running phenom, all-out brawler — how will
                         <em>you</em> rise to stardom? Sure, sharp aim earns applause, but there are endless ways to push
                         your team closer to victory. Lean into your strengths, lock in a play style that's uniquely
@@ -109,9 +140,9 @@
     <section class="contestants-section" id="contestants">
         <div class="container">
             <div class="section-header animate-up">
-                <p class="section-label">The Roster</p>
-                <h2 class="section-title">Killer Contestants</h2>
-                <p class="section-desc">
+                <p class="section-label" data-i18n="roster-label">The Roster</p>
+                <h2 class="section-title" data-i18n="roster-title">Killer Contestants</h2>
+                <p class="section-desc" data-i18n="roster-desc">
                     Master a legendary cast of contestants, each armed with primetime firepower and signature abilities
                     you can wield to outwit, outplay, and outgun the competition.
                 </p>
@@ -127,9 +158,9 @@
                     <div class="contestant-color-bg" style="background:#be6134"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Peter Makinen</p>
-                        <p class="contestant-role">Frontline Bruiser</p>
+                        <p class="contestant-role" data-i18n="role-bruiser">Frontline Bruiser</p>
                         <h3 class="contestant-name">Lumberjack</h3>
-                        <p class="contestant-lore">Gentle giant from the Finnish wilderness who fights with the mythical Mäkinen axe and smiles through it all. Resilient, unshakably calm — he shrugs off punishment and clears the path with raw strength.</p>
+                        <p class="contestant-lore" data-i18n="lore-lumberjack">Gentle giant from the Finnish wilderness who fights with the mythical Mäkinen axe and smiles through it all. Resilient, unshakably calm — he shrugs off punishment and clears the path with raw strength.</p>
                         <ul class="contestant-abilities">
                             <li><span class="ability-type primary">Primary</span> Dive Roll</li>
                             <li><span class="ability-type secondary">Secondary</span> Grand Slam</li>
@@ -148,9 +179,9 @@
                     <div class="contestant-color-bg" style="background:#2e2639"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Shin Soo-Jin</p>
-                        <p class="contestant-role">Stealth Infiltrator</p>
+                        <p class="contestant-role" data-i18n="role-stealth">Stealth Infiltrator</p>
                         <h3 class="contestant-name">Knives</h3>
-                        <p class="contestant-lore">The lethal, masked assassin known as Knives strikes from the shadows and vanishes before the smoke clears. Fast, relentless, and unforgiving — if she has her sights on you, it’s already over.</p>
+                        <p class="contestant-lore" data-i18n="lore-knives">The lethal, masked assassin known as Knives strikes from the shadows and vanishes before the smoke clears. Fast, relentless, and unforgiving — if she has her sights on you, it’s already over.</p>
                         <ul class="contestant-abilities">
                             <li><span class="ability-type primary">Primary</span> Blade Rush</li>
                             <li><span class="ability-type secondary">Secondary</span> Going Dark</li>
@@ -169,7 +200,7 @@
                     <div class="contestant-color-bg" style="background:#344d1d"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Camila Barbosa</p>
-                        <p class="contestant-role">Zone Controller</p>
+                        <p class="contestant-role" data-i18n="role-controller">Zone Controller</p>
                         <h3 class="contestant-name">Arsenal</h3>
                         <p class="contestant-lore">Genius inventor with a gleeful disregard for safety. Top of her class and only slightly unhinged — she floods the map with aggressive contraptions and corrosive tech.</p>
                         <ul class="contestant-abilities">
@@ -190,7 +221,7 @@
                     <div class="contestant-color-bg" style="background:#16373f"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Julius Reeves</p>
-                        <p class="contestant-role">Mobile All-Rounder</p>
+                        <p class="contestant-role" data-i18n="role-mobile">Mobile All-Rounder</p>
                         <h3 class="contestant-name">Bounty Hunter</h3>
                         <p class="contestant-lore">Bounty hunter, showman, part-time myth — Julius rides into every match with flair and firepower on his custom Z1000 motorcycle. Always playing for the highlight reel.</p>
                         <ul class="contestant-abilities">
@@ -211,7 +242,7 @@
                     <div class="contestant-color-bg" style="background:#20223c"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Hazuki Masako</p>
-                        <p class="contestant-role">Precision Fighter</p>
+                        <p class="contestant-role" data-i18n="role-precision">Precision Fighter</p>
                         <h3 class="contestant-name">Banshee</h3>
                         <p class="contestant-lore">Heavy-metal frontwoman with deadly aim and a legendary temper. A high-risk, high-reward fighter who demands perfect shots — she's not here to win, she's here to dominate.</p>
                         <ul class="contestant-abilities">
@@ -232,7 +263,7 @@
                     <div class="contestant-color-bg" style="background:#7f746c"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Jack Burtt</p>
-                        <p class="contestant-role">Support Tactician</p>
+                        <p class="contestant-role" data-i18n="role-support">Support Tactician</p>
                         <h3 class="contestant-name">Roadie</h3>
                         <p class="contestant-lore">Touring roadie turned battlefield engineer — builds, boosts, and blows things up with a backstage pass. His magnet-powered grenade launcher literally makes noise. Lots of it.</p>
                         <ul class="contestant-abilities">
@@ -253,7 +284,7 @@
                     <div class="contestant-color-bg" style="background:#712b2c"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Parker Spencer</p>
-                        <p class="contestant-role">Expert Tracker</p>
+                        <p class="contestant-role" data-i18n="role-tracker">Expert Tracker</p>
                         <h3 class="contestant-name">Scout</h3>
                         <p class="contestant-lore">Expert tracker and crack shot trained by his forest ranger grandfather. Supported by his cybernetic falcon Luther, he keeps eyes on the whole field and covers ground with breathtaking speed.</p>
                         <ul class="contestant-abilities">
@@ -274,7 +305,7 @@
                     <div class="contestant-color-bg" style="background:#832d1d"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Alejandro</p>
-                        <p class="contestant-role">Assault Specialist</p>
+                        <p class="contestant-role" data-i18n="role-assault">Assault Specialist</p>
                         <h3 class="contestant-name">Tango</h3>
                         <p class="contestant-lore">On Last Flag for one reason only — to find his missing sister Maria Elana. Armed with an assault rifle, electric bolas, and proximity mines. No one is stopping him.</p>
                         <ul class="contestant-abilities">
@@ -295,7 +326,7 @@
                     <div class="contestant-color-bg" style="background:#51181c"></div>
                     <div class="contestant-info">
                         <p class="contestant-real-name">Zhao Yuhang</p>
-                        <p class="contestant-role">Momentum Wildcard</p>
+                        <p class="contestant-role" data-i18n="role-momentum">Momentum Wildcard</p>
                         <h3 class="contestant-name">Skyfire</h3>
                         <p class="contestant-lore">Action hero and stunt legend who turns every match into a jetpack-fuelled blockbuster. Thrives on mobility, surprise entries, and chaotic close-quarters takedowns. Full throttle, always.</p>
                         <ul class="contestant-abilities">
@@ -315,9 +346,9 @@
     <section class="feature-section" id="tournaments">
         <div class="container">
             <div class="section-header animate-up">
-                <p class="section-label">Competitive</p>
-                <h2 class="section-title">Upcoming Tournaments</h2>
-                <p class="section-desc">Watch the best teams battle for glory in official Last Flag tournaments. Get
+                <p class="section-label" data-i18n="tournaments-label">Competitive</p>
+                <h2 class="section-title" data-i18n="tournaments-title">Upcoming Tournaments</h2>
+                <p class="section-desc" data-i18n="tournaments-desc">Watch the best teams battle for glory in official Last Flag tournaments. Get
                     your squad ready — the next event could be yours.</p>
             </div>
             <div class="tournament-list animate-up">
@@ -327,13 +358,13 @@
                         <span class="t-month">MAR</span>
                     </div>
                     <div class="tournament-info">
-                        <span class="tournament-badge live">🔴 LIVE SOON</span>
+                        <span class="tournament-badge live" data-i18n="tournament-live">🔴 LIVE SOON</span>
                         <h3 class="tournament-name">BRCT Spring Open 2026</h3>
                         <p class="tournament-meta">10 teams · EU/NA · Prize pool: €5,000</p>
                     </div>
                     <div class="tournament-action">
                         <a href="https://discord.gg/lastflag" target="_blank" class="btn btn-primary"
-                            style="white-space:nowrap">Register</a>
+                            style="white-space:nowrap" data-i18n="tournament-register">Register</a>
                     </div>
                 </div>
                 <div class="tournament-card">
@@ -342,13 +373,13 @@
                         <span class="t-month">MAR</span>
                     </div>
                     <div class="tournament-info">
-                        <span class="tournament-badge upcoming">UPCOMING</span>
+                        <span class="tournament-badge upcoming" data-i18n="tournament-upcoming">UPCOMING</span>
                         <h3 class="tournament-name">Last Flag Invitational — Season 1</h3>
                         <p class="tournament-meta">16 teams · Global · Prize pool: €15,000</p>
                     </div>
                     <div class="tournament-action">
                         <a href="https://discord.gg/lastflag" target="_blank" class="btn btn-outline"
-                            style="white-space:nowrap">Info</a>
+                            style="white-space:nowrap" data-i18n="tournament-info">Info</a>
                     </div>
                 </div>
                 <div class="tournament-card">
@@ -363,7 +394,7 @@
                     </div>
                     <div class="tournament-action">
                         <a href="https://discord.gg/lastflag" target="_blank" class="btn btn-outline"
-                            style="white-space:nowrap">Details</a>
+                            style="white-space:nowrap" data-i18n="tournament-details">Details</a>
                     </div>
                 </div>
             </div>
@@ -375,13 +406,13 @@
         <div class="container">
             <div class="discord-inner animate-up">
                 <div class="discord-text">
-                    <p class="feature-label">Official Community</p>
-                    <h2 class="feature-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">Join the Official<br><span
+                    <p class="feature-label" data-i18n="community-label">Official Community</p>
+                    <h2 class="feature-title" style="font-size: clamp(2.5rem, 5vw, 4rem);" data-i18n="community-title">Join the Official<br><span
                             style="color: var(--primary);">Discord Server</span></h2>
-                    <p class="feature-desc">Connect with thousands of players, get early access to updates, find
+                    <p class="feature-desc" data-i18n="community-desc">Connect with thousands of players, get early access to updates, find
                         teammates, and be the first to know about upcoming tournaments. The arena awaits.</p>
                     <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
-                        <a href="https://discord.com/invite/lastflag" target="_blank" class="btn btn-primary">Join Server</a>
+                        <a href="https://discord.com/invite/lastflag" target="_blank" class="btn btn-primary" data-i18n="community-join">Join Server</a>
                         <a href="https://discord.com/invite/lastflag" target="_blank"
                             class="btn btn-outline">discord.com/invite/lastflag</a>
                     </div>
@@ -407,7 +438,7 @@
                             <span>Thousands of members online</span>
                         </div>
                         <a href="https://discord.com/invite/lastflag" target="_blank" class="btn btn-primary"
-                            style="width:100%; text-align:center; margin-top:1.25rem;">Join Server</a>
+                            style="width:100%; text-align:center; margin-top:1.25rem;" data-i18n="community-join">Join Server</a>
                     </div>
                 </div>
             </div>
@@ -417,14 +448,14 @@
     <!-- ======== JOIN THE CREW ======== -->
     <section class="cta-section" id="community">
         <div class="container animate-up">
-            <p class="cta-label">For Creators</p>
-            <h2 class="cta-title">Join the Crew</h2>
-            <p class="cta-desc">
+            <p class="cta-label" data-i18n="creators-label">For Creators</p>
+            <h2 class="cta-title" data-i18n="creators-title">Join the Crew</h2>
+            <p class="cta-desc" data-i18n="creators-desc">
                 Are you a content creator interested in teaming up with Last Flag? Apply to our creator program and
                 become part of the show.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://lastflag.firstlook.gg/creator" target="_blank" class="btn btn-primary">Apply Now</a>
+                <a href="https://lastflag.firstlook.gg/creator" target="_blank" class="btn btn-primary" data-i18n="creators-apply">Apply Now</a>
                 <a href="https://discord.gg/lastflag" target="_blank" class="btn btn-outline">Join Discord</a>
             </div>
         </div>
@@ -445,9 +476,9 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <p>© Last Flag 2025 – Night Street Games</p>
-                <a href="https://lastflag.com/privacy-policy" target="_blank">Privacy Policy</a>
-                <a href="https://lastflag.com/eula" target="_blank">EULA</a>
-                <a href="https://cosmocover.box.com/s/opw3u9lmq9jkeip847bglfgfkfk06bv7" target="_blank">Media Kit</a>
+                <a href="https://lastflag.com/privacy-policy" target="_blank" data-i18n="footer-privacy">Privacy Policy</a>
+                <a href="https://lastflag.com/eula" target="_blank" data-i18n="footer-eula">EULA</a>
+                <a href="https://cosmocover.box.com/s/opw3u9lmq9jkeip847bglfgfkfk06bv7" target="_blank" data-i18n="footer-media">Media Kit</a>
             </div>
         </div>
     </footer>
