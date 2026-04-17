@@ -19,18 +19,38 @@
             <a href="/">
                 <img src="/LOGO.png" alt="Last Flag" class="nav-logo" />
             </a>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/#how-to-play">How to Play</a></li>
-                    <li><a href="/#playstyles">Playstyles</a></li>
-                    <li><a href="/#contestants">Contestants</a></li>
-                    <li><a href="/#tournaments">Tournaments</a></li>
-                    <li><a href="/#discord">Community</a></li>
+                    <li><a href="/#how-to-play" data-i18n="nav-how-to-play">How to Play</a></li>
+                    <li><a href="/#playstyles" data-i18n="nav-playstyles">Playstyles</a></li>
+                    <li><a href="/#contestants" data-i18n="nav-contestants">Contestants</a></li>
+                    <li><a href="/#tournaments" data-i18n="nav-tournaments">Tournaments</a></li>
+                    <li><a href="/#discord" data-i18n="nav-community">Community</a></li>
                 </ul>
             </nav>
-            <div>
-                <a href="https://lastflag.firstlook.gg/signup/waitlist" target="_blank"
-                    class="btn btn-primary btn-nav">Sign Up to Playtest</a>
+            <div class="lang-dropdown">
+                <button class="lang-trigger">ES</button>
+                <div class="lang-options">
+                    <button class="lang-option" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="es">Español</button>
+                </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <a href="http://bit.ly/4oNgbQM" target="_blank"
+                    class="btn btn-outline btn-nav">
+                    <img src="/steam-logo.png" alt="Steam" class="btn-icon" style="filter: none;">
+                    <span data-i18n="hero-wishlist">Get it on STEAM</span>
+                </a>
+                <a href="https://store.epicgames.com/" target="_blank"
+                    class="btn btn-primary btn-nav">
+                    <img src="/epic-logo.png" alt="Epic Games" class="btn-icon">
+                    <span data-i18n="nav-signup">Get it on EPIC GAMES</span>
+                </a>
             </div>
         </div>
     </header>
@@ -91,8 +111,14 @@
         <div class="container animate-up visible">
             <h2 class="cta-title">Join the Arena</h2>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://lastflag.firstlook.gg/signup/waitlist" target="_blank" class="btn btn-primary">Sign Up
-                    to Playtest</a>
+                <a href="http://bit.ly/4oNgbQM" target="_blank" class="btn btn-outline">
+                    <img src="/steam-logo.png" alt="Steam" class="btn-icon" style="filter: none;">
+                    <span data-i18n="hero-wishlist">Get it on STEAM</span>
+                </a>
+                <a href="https://store.epicgames.com/" target="_blank" class="btn btn-primary">
+                    <img src="/epic-logo.png" alt="Epic Games" class="btn-icon">
+                    <span data-i18n="nav-signup">Get it on EPIC GAMES</span>
+                </a>
             </div>
         </div>
     </section>
